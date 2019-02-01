@@ -1,5 +1,13 @@
 # screenfull.js
 
+> This is fork of original lib.
+```js
+if (document.fullscreenEnabled) {
+	requestFullscreen(document.documentElement, option);
+}
+```
+options is https://developer.mozilla.org/en-US/docs/Web/API/FullscreenOptions
+
 > Simple wrapper for cross-browser usage of the JavaScript [Fullscreen API](https://developer.mozilla.org/en/DOM/Using_full-screen_mode), which lets you bring the page or any element into fullscreen. Smoothens out the browser implementation differences, so you don't have to.
 
 **This package is feature complete. No new changes will be accepted.**

@@ -78,7 +78,7 @@
 	};
 
 	var screenfull = {
-		request: function (elem) {
+		request: function (elem, options) {
 			return new Promise(function (resolve) {
 				var request = fn.requestFullscreen;
 
@@ -96,7 +96,7 @@
 				if (/ Version\/5\.1(?:\.\d+)? Safari\//.test(navigator.userAgent)) {
 					elem[request]();
 				} else {
-					elem[request](keyboardAllowed ? Element.ALLOW_KEYBOARD_INPUT : {});
+					elem[request](options ? options : (keyboardAllowed ? Element.ALLOW_KEYBOARD_INPUT : {}));
 				}
 
 				this.on('change', onFullScreenEntered);
